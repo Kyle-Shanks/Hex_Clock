@@ -3,7 +3,7 @@ function getTime() {
 		hr = thyme.getHours(),
 		min = thyme.getMinutes(),
 		sec = thyme.getSeconds(),
-        r = Math.round(hr * 10.625).toString(16),
+        r = Math.round(hr * 11.087).toString(16),
 		g = Math.round(min * 4.32).toString(16),
 		b = Math.round(sec * 4.32).toString(16);
 
