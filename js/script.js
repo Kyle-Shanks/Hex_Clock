@@ -55,7 +55,7 @@ function isDark(hex) {
 
 var app = new Vue({
     el: '#app',
-    data: { info: '', white: '' },
+    data: { info: '', white: '', desc: '' },
     computed: {
         rgb: function() { return this.info[3]+this.info[4]+this.info[5] },
         time: function() { return this.info[0]+':'+this.info[1]+':'+this.info[2] },
@@ -64,6 +64,7 @@ var app = new Vue({
         update: function() { 
             this.info = getTime(); 
             this.white = ((isDark(this.rgb))?'white':'');
+            this.desc = ntc.name(app.rgb)[1];
         }
     }
 });
